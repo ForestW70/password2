@@ -1,0 +1,22 @@
+.meat > p {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.check-opts {
+    display: flex;
+    align-items: center;
+}
+
+.check-opts > article {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 20px;
+    align-items: center;
+}
+
+.new-pass {
+    border: 10px groove red;
+    padding: 10px;
+    width: 50px;
+}
