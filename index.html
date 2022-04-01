@@ -15,47 +15,55 @@
     </header>
     <div class="meat">
         <p>Let's get you a new password</p>
-        <section>
-            <p>How many characters?</p>
-            <div class="check-opts">
-                <article>
-                    <label for="8char">8</label>
-                    <input type="checkbox" id="8char" name="8char">
-                </article>
-                <article>
-                    <label for="10char">10</label>
-                    <input type="checkbox" id="10char" name="10char">
-                </article>
-                <article>
-                    <label for="12char">12</label>
-                    <input type="checkbox" id="12char" name="12char">
-                </article>
-            </div>
-        </section>
-        <section>
-            <p>Want it special?</p>
-            <div class="check-opts">
-                <article>
-                    <label for="upper">Uppercase</label>
-                    <input type="checkbox" id="upper" name="upper">
-                </article>
-                <article>
+        <form id="modForm">
 
-                    <label for="nums">Numbers</label>
-                    <input type="checkbox" id="nums" name="nums">
-                </article>
-                <article>
-
-                    <label for="syms">Symbols</label>
-                    <input type="checkbox" id="syms" name="syms">
-                </article>
-            </div>
-        </section>
-        
-        <button id="genPassBtn">Gimme Password</button>
-        <p class="new-pass hide">A5GI@)DAJH</p>
+            <!-- <section>
+                <p>How many characters?</p>
+                <div class="check-opts">
+                    <article>
+                        <label for="8char">8</label>
+                        <input type="checkbox" id="8char" name="8char">
+                    </article>
+                    <article>
+                        <label for="10char">10</label>
+                        <input type="checkbox" id="10char" name="10char">
+                    </article>
+                    <article>
+                        <label for="12char">12</label>
+                        <input type="checkbox" id="12char" name="12char">
+                    </article>
+                </div>
+            </section> -->
+            <section>
+                <p>Want it special?</p>
+                <div class="check-opts">
+                    <article>
+                        <label for="upper">Uppercase</label>
+                        <input type="checkbox" id="upper" name="upper">
+                    </article>
+                    <article>
+                        
+                        <label for="nums">Numbers</label>
+                        <input type="checkbox" id="nums" name="nums">
+                    </article>
+                    <article>
+                        
+                        <label for="syms">Symbols</label>
+                        <input type="checkbox" id="syms" name="syms">
+                    </article>
+                    <article>
+                        <label for="long">Long</label>
+                        <input type="checkbox" id="long" name="long">
+                    
+                    </article>
+                </div>
+            </section>
+        </form>
+            
+            <button id="genPassBtn">Gimme Password</button>
+            <p class="new-pass hide">A5GI@)DAJH</p>
     </div>
 </body>
 
-<script src="scripts.js"></script>
+<script type="module" src="scripts.js"></script>
 </html>
