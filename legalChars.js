@@ -1,14 +1,34 @@
-const lowerCaseChars = charArrayGeneration(97, 122);
-const upperCaseChars = charArrayGeneration(65, 90);
-const numbersChars = charArrayGeneration(48, 57);
-const symbolsChars = charArrayGeneration(34, 47).concat(charArrayGeneration(58, 64)).concat(charArrayGeneration(91, 96));
+export const lcChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+export const ucChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+export const numChars = ['2', '3', '4', '5', '6', '7', '8', '9'];
+export const symChars = ['!', '$', '%', '?', '*', '_', '+', '='];
+export const allChars = lcChars.concat(ucChars).concat(numChars).concat(symChars);
 
-function charArrayGeneration(low, high) {
-    const array = [];
-    for (let i = low; i <= high; i++) {
-        array.push(i);
-    }
+export const numonix = {
+    a: "apple",
+    b: "buff",
+    c: "cat",
+    d: "dingo",
+    e: "echo",
+    f: "forest!",
+    g: "grandma",
+    h: "hamlet",
+    j: "jello",
+    k: "king",
+    m: "maple",
+    n: "name",
+    p: "poggers",
+    q: "quest",
+    r: "rats",
+    s: "sting",
+    t: "tasty",
+    u: "utah",
+    v: "vehicle",
+    w: "whale",
+    x: "xylophone",
+    y: "you son of a beatch",
+    z: "zap"
+};
 
-    return array;
-}
+
 
