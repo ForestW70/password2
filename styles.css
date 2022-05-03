@@ -1,70 +1,91 @@
-/* reset */
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 header {
-  /* background-color: #033c59; */
-  padding: 30px 5px;
-  margin: 0;
+  background-color: #033c5a;
+  
 }
 
 h1 {
-  margin: 5px;
-  background-color: white;
-  color: #033c5a;
+    margin: 0;
+    background-color: white;
+    padding: 10px;
 }
 
 header > p {
-  background-color: #033c59;
-  color: white;
-  font-style: italic;
-  font-size: 20px;
-  padding: 20px 5px;
-  margin: 0;
+    
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    padding:10px;
 }
 
-.meat {
+header > button {
+  /* display: inline; */
   margin: 10px;
 }
 
-#modForm > div {
-  padding-bottom: 20px;
+
+.meat {
+    margin: 10px;
+}
+
+.infos {
+  margin: 20px 10px;
   display: flex;
-  align-items: center;
+   
 }
 
-#modForm label {
-  font-size: 25px;
-  font-family: sans-serif;
-  margin-right: 10px;
-}
-
-#gener8 {
-  font-size: 18px;
-  padding: 10px 5px;
-  font-family: fantasy;
-  box-shadow: 10px 10px 10px darkgoldenrod;
-  margin-bottom: 15px;
+#currPass {
+  width: 50%;
 }
 
 #newPass {
-  padding: 5px;
-  border: 2px inset #800808;
-  margin: 10px auto;
-  min-height: 20px;
+    padding: 5px;
+    border: 2px inset #800808;
+    margin: 0px auto 10px;
+    min-height: 20px;
 }
-
+  
 #howDoUSay {
-  border: 2px dotted rgb(132, 132, 255);
-  min-height: 200px;
-  width: 100%;
+    border: 2px dotted rgb(132, 132, 255);
+    /* min-height: 200px; */
+    /* width: 100%; */
+}
+  
+#howDoUSay > p {
+    color: red;
+    padding: 0;
+    margin: 5px;
 }
 
-#howDoUSay > p {
-  color: red;
-  padding: 0;
-  margin: 5px;
+#pastPass > div {
+  margin: 0 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pass-hist {
+  font-size: 12px;
+  
+}
+
+#pastPass > div:nth-child(1) > .pass-hist {
+  font-size: 20px;
+}
+
+#pastPass > div:nth-child(2) > .pass-hist {
+  font-size: 15px;
+}
+
+.pass-ts {
+  color: gold;
+  font-size: 10px;
+  font-family: sans-serif;
+  border-left: 1px solid black;
+  padding-left: 5px;
+  margin-bottom: 30px;
 }

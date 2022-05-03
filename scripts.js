@@ -6,6 +6,7 @@ const submitBtn = document.getElementById("gener8");
 
 const pwDump = document.getElementById("newPass");
 const soundOut = document.getElementById("howDoUSay");
+const passHistory = document.getElementById("pastPass");
 
 
 
@@ -20,6 +21,7 @@ submitBtn.addEventListener("click", (eee) => {
 const generatePassword = (len) => {
     const newPassword = `${reqString()}${getRest(len)}`;
     pwDump.innerText = newPassword;
+    dumpHistory(newPassword);
     dispNmnx(newPassword)
 
 }
@@ -63,6 +65,24 @@ const dispNmnx = (str) => {
 
 const getNu = (x) => {
     const san = x.toLowerCase();
-    const monx = numonix[san];
-    return monx;
+    const monix = numonix[san];
+    return monix;
+}
+
+const dumpHistory = (pass) => {
+	const logHistPass = document.createElement("span");
+  logHistPass.classList.add("pass-hist")
+  logHistPass.innerText = pass;
+  
+  const logHistTs = document.createElement("span");
+  logHistTs.classList.add("pass-ts")
+  const rightNow = new Date();
+  const time = rightNow.getHours() + ":" + rightNow.getMinutes() + ":" + rightNow.getSeconds();
+  logHistTs.innerText = time;
+  
+  const historyRow = document.createElement("div");
+  historyRow.appendChild(logHistPass);
+  historyRow.appendChild(logHistTs);
+  
+  passHistory.prepend(historyRow);
 }

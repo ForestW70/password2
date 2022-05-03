@@ -14,6 +14,7 @@
         <h1>ITSC EZ Passwordifier</h1>
         <p>Let's get you a new password</p>
     </header>
+
     <div class="meat">
         <form id="modForm">
             <div>
@@ -21,6 +22,7 @@
                 <input type="number" id="charCount" name="charCount" value="8" size="1" min="4" max="25"
                     pattern="[0-9]">
             </div>
+
             <div>
                 <label for="fancy">Want it fancy?</label>
                 <input type="checkbox" id="fancy" diabled="true">
@@ -28,8 +30,18 @@
             <button id="gener8">Gimme Password</button>
         </form>
 
-        <section id="newPass"></section>
-        <section id="howDoUSay"></section>
+        <section class="infos">
+            <div id="currPass">
+                <article id="newPass"></article>
+                <article id="howDoUSay"></article>
+            </div>
+            <div id="pastPass">
+                
+            </div>
+
+        </section>
+
+
     </div>
 </body>
 
