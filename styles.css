@@ -29,6 +29,27 @@ header > p {
 .meat {
   margin: 10px;
 }
+
+#modForm > div {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#modForm label {
+  font-size: 25px;
+  font-family: sans-serif;
+  margin-right: 10px;
+}
+
+#gener8 {
+  font-size: 18px;
+  padding: 10px 5px;
+  font-family: fantasy;
+  box-shadow: 10px 10px 10px darkgoldenrod;
+  margin-bottom: 15px;
+}
+
 #newPass {
   padding: 5px;
   border: 2px inset #800808;
