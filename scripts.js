@@ -86,3 +86,17 @@ const dumpHistory = (pass) => {
 
     passHistory.prepend(historyRow);
 }
+
+const modalDisp = document.getElementById("modal");
+const modalClose = document.getElementById("close");
+const oBtn = document.getElementById("infoModal");
+
+oBtn.addEventListener("click", e => {
+    e.preventDefault();
+    modalDisp.style.display = "block";
+})
+
+modalClose.addEventListener("click", e => {
+    e.preventDefault();
+    modalDisp.style.display = "none";
+})

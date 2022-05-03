@@ -1,6 +1,6 @@
 # Forest Wilson - password2 - 4/21/2022
 
-v2.0 - MIT - For Good.
+v2.2 - MIT - For Good.
 
 * # Content:
 - [Description](#description)
@@ -22,8 +22,6 @@ v2.0 - MIT - For Good.
     * ###### more to come ~
         - add fancy setting
         - set up prefered default
-        - past password history
-        - update styles
         - color schemes
         - complete numonix list (nums, syms, caps)
         - suggest words for the numonix list (db)
