@@ -14,32 +14,61 @@ h1 {
     padding: 10px;
 }
 
-header > p {
-    
+header > span {
     font-size: 20px;
     color: white;
     margin: 0;
-    padding:10px;
+    padding:25px 10px;
 }
 
 header > button {
   /* display: inline; */
-  margin: 10px;
+  margin: 25px;
 }
 
 
 .meat {
-    margin: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+label {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+input {
+  max-width: 100px;
+  align-self: center;
+  margin: 0
+}
+
+#fancy {
+  width: 18px;
+  height: 18px;
+}
+
+#gener8 {
+  margin: 30px;
 }
 
 .infos {
-  margin: 20px 10px;
+  margin: 0px 10px;
+  
   display: flex;
-   
+  flex-direction: column;
+}
+
+.infos > p {
+  text-shadow: 3px 3px 3px yellow;
+  font-size: 30px;
+  font-family: fantasy;
+  margin: 5px 0;
 }
 
 #currPass {
-  width: 50%;
+  margin: 10px;
 }
 
 #newPass {
@@ -65,7 +94,7 @@ header > button {
   margin: 0 10px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .pass-hist {
@@ -82,7 +111,7 @@ header > button {
 }
 
 .pass-ts {
-  color: gold;
+  color: rgb(158, 134, 0);
   font-size: 10px;
   font-family: sans-serif;
   border-left: 1px solid black;

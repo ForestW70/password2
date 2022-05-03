@@ -15,7 +15,7 @@ submitBtn.addEventListener("click", (eee) => {
     eee.preventDefault();
     const chars = charCount.value;
     generatePassword(chars);
-    
+
 });
 
 const generatePassword = (len) => {
@@ -39,7 +39,7 @@ const reqString = () => {
 // the rest to fill space
 const getRest = (x) => {
     let theRest = "";
-    for (let i = 3; i < x; i++) {
+    for (let i = 4; i < x; i++) {
         theRest += allChars[Math.floor(Math.random() * allChars.length)];
     }
 
@@ -65,24 +65,24 @@ const dispNmnx = (str) => {
 
 const getNu = (x) => {
     const san = x.toLowerCase();
-    const monix = numonix[san];
+    const monix = numonix[san][0];
     return monix;
 }
 
 const dumpHistory = (pass) => {
-	const logHistPass = document.createElement("span");
-  logHistPass.classList.add("pass-hist")
-  logHistPass.innerText = pass;
-  
-  const logHistTs = document.createElement("span");
-  logHistTs.classList.add("pass-ts")
-  const rightNow = new Date();
-  const time = rightNow.getHours() + ":" + rightNow.getMinutes() + ":" + rightNow.getSeconds();
-  logHistTs.innerText = time;
-  
-  const historyRow = document.createElement("div");
-  historyRow.appendChild(logHistPass);
-  historyRow.appendChild(logHistTs);
-  
-  passHistory.prepend(historyRow);
+    const logHistPass = document.createElement("span");
+    logHistPass.classList.add("pass-hist")
+    logHistPass.innerText = pass;
+
+    const logHistTs = document.createElement("span");
+    logHistTs.classList.add("pass-ts")
+    const rightNow = new Date();
+    const time = rightNow.getHours() + ":" + rightNow.getMinutes() + ":" + rightNow.getSeconds();
+    logHistTs.innerText = time;
+
+    const historyRow = document.createElement("div");
+    historyRow.appendChild(logHistPass);
+    historyRow.appendChild(logHistTs);
+
+    passHistory.prepend(historyRow);
 }
