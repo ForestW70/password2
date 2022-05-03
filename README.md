@@ -39,6 +39,6 @@ v2.0 - MIT - For Good.
     - [Thnx!](https://soundcloud.com/itsjustaburner) 
 
 - ###### Links:    
-    - [Visit page](https://forestw70.github.io/passwords2/)
-    - [Visit repo](https://github.com/ForestW70/passwords2)
+    - [Visit page](https://forestw70.github.io/password2/)
+    - [Visit repo](https://github.com/ForestW70/password2)
 
