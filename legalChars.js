@@ -17,7 +17,7 @@ export const numonix = {
     k: ["kilo", "king"],
     m: ["mike", "maple"],
     n: ["november", "name"],
-    p: ["oscar", "poggers"],
+    p: ["papa", "poggers"],
     q: ["quebec", "quest"],
     r: ["romeo", "rats"],
     s: ["sierra", "sting"],

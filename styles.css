@@ -84,6 +84,11 @@ input {
   height: 18px;
 }
 
+.fas {
+  font-size: 18px;
+  color: grey;
+}
+
 #gener8 {
   margin: 30px;
 }
