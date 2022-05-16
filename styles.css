@@ -5,13 +5,20 @@ body {
 
 header {
   background-color: #033c5a;
-  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
 }
 
 h1 {
     margin: 0;
     background-color: white;
-    padding: 10px;
+    font-size: 50px;
+    width: 35%;
+    padding: 40px 50px;
+    display: inline;
+    /* text-align: center; */
 }
 
 header > span {
@@ -19,11 +26,17 @@ header > span {
     color: white;
     margin: 0;
     padding:25px 10px;
+    font-style: oblique;
 }
 
 header > button {
-  /* display: inline; */
+  height: 75px;
+  width: 75px;
   margin: 25px;
+  border-radius: 4px;
+  font-size: 27px;
+  background: white;
+    color: #033c5a;
 }
 
 #modal {
@@ -157,4 +170,11 @@ input {
   border-left: 1px solid black;
   padding-left: 5px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 20px;
+    width: 25%;
+  }
 }
