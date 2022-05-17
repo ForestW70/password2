@@ -5,6 +5,7 @@ body {
 
 header {
   background-color: #033c5a;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   text-align: center;
@@ -39,6 +40,7 @@ header > button {
   font-size: 27px;
   background: white;
     color: #033c5a;
+    cursor: pointer;
 }
 
 #modal {
@@ -114,9 +116,13 @@ input {
   margin: 20px 5px;
   padding: 15px;
   font-size: 20px;
-  background-color: cornflowerblue;
-  color: white;
-  font-family: serif;
+  background-color: #076394;
+  color: black;
+  border-radius: 6px;
+    cursor: pointer;
+    border: outset;
+    border-width: 10px;
+    font-family: serif;
 }
 
 .infos {  
@@ -125,7 +131,7 @@ input {
 }
 
 .infos > p {
-  text-shadow: 3px 3px 3px yellow;
+  text-shadow: 3px 3px 3px chartreuse;
   font-size: 30px;
   font-family: fantasy;
   margin: 15px 0;
@@ -197,7 +203,7 @@ input {
 }
 
 #pastPass > div:nth-child(7) > .pass-hist {
-  font-size: 6git apx;
+  font-size: 6px;
 }
 
 #pastPass > div:nth-child(8) > .pass-hist {
