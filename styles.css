@@ -18,7 +18,7 @@ h1 {
     width: 35%;
     padding: 40px 50px;
     display: inline;
-    /* text-align: center; */
+    padding: 26px;
 }
 
 header > span {
@@ -32,7 +32,9 @@ header > span {
 header > button {
   height: 75px;
   width: 75px;
-  margin: 25px;
+  min-height: 50px;
+    min-width: 50px;
+  /* margin: 25px; */
   border-radius: 4px;
   font-size: 27px;
   background: white;
@@ -76,9 +78,15 @@ header > button {
 }
 
 .meat {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+.opt-label {
+  padding: 15px 0;
+
 }
 
 label {
@@ -103,12 +111,15 @@ input {
 }
 
 #gener8 {
-  margin: 30px;
+  margin: 20px 5px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: cornflowerblue;
+  color: white;
+  font-family: serif;
 }
 
-.infos {
-  margin: 0px 10px;
-  
+.infos {  
   display: flex;
   flex-direction: column;
 }
@@ -117,18 +128,21 @@ input {
   text-shadow: 3px 3px 3px yellow;
   font-size: 30px;
   font-family: fantasy;
-  margin: 5px 0;
+  margin: 15px 0;
 }
 
 #currPass {
-  margin: 10px;
+  width: 75%;
 }
 
 #newPass {
-    padding: 5px;
+    padding: 20px 5px;
+    font-size: 30px;
     border: 2px inset #800808;
-    margin: 0px auto 10px;
-    min-height: 20px;
+    text-align: center;
+    min-height: 30px;
+    letter-spacing: 10px;
+    word-break: break-all;
 }
   
 #howDoUSay {
@@ -138,16 +152,17 @@ input {
 }
   
 #howDoUSay > p {
-    color: red;
+    color: grey;
     padding: 0;
-    margin: 5px;
+    font-size: 18px;
+    margin: 10px 15px;
 }
 
 #pastPass > div {
-  margin: 0 10px;
+  margin: 0 5px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .pass-hist {
@@ -156,11 +171,41 @@ input {
 }
 
 #pastPass > div:nth-child(1) > .pass-hist {
-  font-size: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-decoration-line: underline;
 }
 
 #pastPass > div:nth-child(2) > .pass-hist {
-  font-size: 15px;
+  font-size: 19px;
+}
+
+#pastPass > div:nth-child(3) > .pass-hist {
+  font-size: 16px;
+}
+
+#pastPass > div:nth-child(4) > .pass-hist {
+  font-size: 12px;
+}
+
+#pastPass > div:nth-child(5) > .pass-hist {
+  font-size: 10px;
+}
+
+#pastPass > div:nth-child(6) > .pass-hist {
+  font-size: 8px;
+}
+
+#pastPass > div:nth-child(7) > .pass-hist {
+  font-size: 6git apx;
+}
+
+#pastPass > div:nth-child(8) > .pass-hist {
+  font-size: 3px;
+}
+
+#pastPass > div:nth-child(n+8) > .pass-hist {
+  font-size: 2px;
 }
 
 .pass-ts {
@@ -176,5 +221,8 @@ input {
   h1 {
     font-size: 20px;
     width: 25%;
+  }
+  header > button {
+    
   }
 }

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> -->
-    <link rel="icon" href="https://img.favpng.com/11/20/4/question-mark-logo-clip-art-png-favpng-HCEDEmZHyuT6nqpwMg35JxAyU.jpg">
+    <link rel="icon"
+        href="https://img.favpng.com/11/20/4/question-mark-logo-clip-art-png-favpng-HCEDEmZHyuT6nqpwMg35JxAyU.jpg">
     <title>Passwordifier</title>
 </head>
 
@@ -22,31 +23,45 @@
 
         <div class="modal-txt">
             <span id="close">&times;</span>
-            <p>Password2 was developed by Forest Wilson to serve as a way to quickly generate secure passwords without needing to custom fit criteria like you would in other password generating websites. This will generate a proper length password with all necessary symbols and characters out of the box, cutting down on the total time it takes to get a new secure password.</p>
-            <p>By default, Password2 will generate an 8 char string, containing lowercase and uppercase letters, as well as numbers and symbols. All ambiguous characters have been removed to make the password easy to recite and interpret over the phone, as well as over text. (ie. 1, I, l, 0, O, o) Generated passwords will save to the sidebar in the case you need to revisit them with a user.</p>
-            <p>I am working on more features such as a local storage save of your past passwords, customization to the phonetic alphabet, user-set default settings, and more. If there is a feature you would like me to add, shoot me a message and I'll try and put it in!</p>
+            <p>Password2 was developed by Forest Wilson to serve as a way to quickly generate secure passwords without
+                needing to custom fit criteria like you would in other password generating websites. This will generate
+                a proper length password with all necessary symbols and characters out of the box, cutting down on the
+                total time it takes to get a new, secure password.</p>
+            <p>By default, Password2 will generate an 8 char string, containing lowercase and uppercase letters, as well
+                as numbers and symbols. All ambiguous characters have been removed to make the password easy to recite
+                and interpret over the phone, as well as over text. (ie. 1, I, l, 0, O, o) Generated passwords will save
+                to the history in the case you need to revisit them with a user.</p>
+            <p>I am working on more features such as choosing which characters to pull from, customization to the
+                phonetic alphabet, user-set default settings, and more. If there is a feature you would like me to add,
+                shoot me a message and I'll try and put it in!</p>
         </div>
 
     </div>
     <div class="meat">
+        <section>
+            <div class="opt-label">
+                <label for="charCount">How many characters?</label>
+                <input type="number" id="charCount" name="charCount" value="8" size="1" min="4" max="25"
+                    pattern="[0-9]">
 
-        <label for="charCount">How many characters?</label>
-        <input type="number" id="charCount" name="charCount" value="8" size="1" min="4" max="25" pattern="[0-9]">
+            </div>
 
-        <label for="fancy">
-            Want it fancy?
-            <!-- <i class="fas fa-lightbulb fa-blink" alt="bing-bong"></i> -->
-        </label>
-        
-        <input type="checkbox" id="fancy" checked="true" disabled="true">
+            <div class="opt-label">
+                <label for="fancy">
+                    Want it fancy?
+                    <!-- <i class="fas fa-lightbulb fa-blink" alt="bing-bong"></i> -->
+                </label>
+                <input type="checkbox" id="fancy" checked="true" disabled="true">
 
-        <button id="gener8">Gimme Password</button>
-        <br>
+            </div>
 
-        <div id="currPass">
-            <article id="newPass"></article>
-            <article id="howDoUSay"></article>
-        </div>
+            <button id="gener8">Gimme Password</button>
+
+            <div id="currPass">
+                <article id="newPass"></article>
+                <article id="howDoUSay"></article>
+            </div>
+        </section>
 
         <section class="infos">
             <p>Password History</p>
