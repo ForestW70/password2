@@ -114,10 +114,10 @@ input {
 
 #gener8 {
   margin: 20px 5px;
-  padding: 15px;
+  /* padding: 15px; */
   font-size: 20px;
   background-color: #076394;
-  color: black;
+  color: white;
   border-radius: 6px;
     cursor: pointer;
     border: outset;
@@ -131,14 +131,20 @@ input {
 }
 
 .infos > p {
-  text-shadow: 3px 3px 3px chartreuse;
-  font-size: 30px;
+  /* text-shadow: 3px 3px 3px chartreuse; */
+  font-size: 40px;
   font-family: fantasy;
-  margin: 15px 0;
+  margin: 50px 0;
 }
 
 #currPass {
-  width: 75%;
+  width: 50%;
+}
+
+.your-password-sir {
+  border: 10px silver inset;
+    border-style: ridge;
+    box-shadow: 10px 10px 3px navy;
 }
 
 #newPass {

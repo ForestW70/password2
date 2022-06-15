@@ -3,6 +3,7 @@ import { lcChars, ucChars, numChars, symChars, allChars, numonix } from "./legal
 const charCount = document.getElementById("charCount");
 const fancyBool = document.getElementById("fancy")
 const submitBtn = document.getElementById("gener8");
+const passBox = document.getElementById("currPass");
 
 const pwDump = document.getElementById("newPass");
 const soundOut = document.getElementById("howDoUSay");
@@ -15,6 +16,7 @@ submitBtn.addEventListener("click", (eee) => {
     eee.preventDefault();
     const chars = charCount.value;
     generatePassword(chars);
+    passBox.classList.add("your-password-sir")
 
 });
 
@@ -100,3 +102,6 @@ modalClose.addEventListener("click", e => {
     e.preventDefault();
     modalDisp.style.display = "none";
 })
+
+
+
