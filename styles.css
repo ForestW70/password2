@@ -149,11 +149,11 @@ input {
 
 #newPass {
     padding: 20px;
-    font-size: 30px;
+    font-size: 45px;
     border: 2px inset #800808;
     text-align: left;
     min-height: 30px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     word-break: break-all;
 }
   

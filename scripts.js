@@ -1,4 +1,4 @@
-import { lcChars, ucChars, numChars, symChars, allChars, numonix } from "./legalChars.js";
+import { lcChars, ucChars, numChars, symChars, allChars, numonix, mumbers, symbolicDevices } from "./legalChars.js";
 
 const charCount = document.getElementById("charCount");
 const fancyBool = document.getElementById("fancy")
@@ -51,24 +51,41 @@ const getRest = (x) => {
 const dispNmnx = (str) => {
     soundOut.innerText = ""
     const passArr = str.split("");
-    const validate = /[A-Za-z]/;
+    const lValidate = /[A-Za-z]/;
+    const nValidate = /[0-9]/;
 
     passArr.forEach(char => {
         const newP = document.createElement("p");
-        if (char.match(validate)) {
-            newP.innerText = `${char} -- as in ${getNu(char)}`;
+        if (char.match(lValidate)) {
+            newP.innerText = `${char} ~ ${getLet(char)}`;
+        } else if (char.match(nValidate)){
+            newP.innerText = `${char} ~~ ${getNum(char)}`
         } else {
-            newP.innerText = char;
-        }
+            newP.innerText = `${char} ~~~ ${getSym(char)}`
+        } 
 
         soundOut.appendChild(newP);
     })
 }
 
-const getNu = (x) => {
+const getLet = (x) => {
     const san = x.toLowerCase();
     const monix = numonix[san][0];
-    return monix;
+    
+    if (x === san) {
+        return "lower case, " + monix
+    }
+    return "UPPER case, " + monix
+}
+
+const getNum = (x) => {
+    const luckyNum = mumbers[x];
+    return luckyNum;
+}
+
+const getSym = (x) => {
+    const simba = symbolicDevices[x][0];
+    return simba;
 }
 
 const dumpHistory = (pass) => {
