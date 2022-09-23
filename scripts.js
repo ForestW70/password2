@@ -7,13 +7,14 @@ const passBox = document.getElementById("currPass");
 
 const pwDump = document.getElementById("newPass");
 const soundOut = document.getElementById("howDoUSay");
-const passHistory = document.getElementById("pastPass");
-
+const passHistory = document.getElementById("lastPassHint");
+let lastPasswordUsed = ""
 
 
 
 submitBtn.addEventListener("click", (eee) => {
     eee.preventDefault();
+    passHistory.classList.add("hide");
     const chars = charCount.value;
     generatePassword(chars);
     passBox.classList.add("your-password-sir")
@@ -89,22 +90,33 @@ const getSym = (x) => {
 }
 
 const dumpHistory = (pass) => {
-    const logHistPass = document.createElement("span");
-    logHistPass.classList.add("pass-hist")
-    logHistPass.innerText = pass;
+    // const logHistPass = document.createElement("span");
+    // logHistPass.classList.add("pass-hist")
+    // logHistPass.innerText = pass;
 
-    const logHistTs = document.createElement("span");
-    logHistTs.classList.add("pass-ts")
-    const rightNow = new Date();
-    const time = rightNow.getHours() + ":" + rightNow.getMinutes() + ":" + rightNow.getSeconds();
-    logHistTs.innerText = time;
+    // const logHistTs = document.createElement("span");
+    // logHistTs.classList.add("pass-ts")
+    // const rightNow = new Date();
+    // const time = rightNow.getHours() + ":" + rightNow.getMinutes() + ":" + rightNow.getSeconds();
+    // logHistTs.innerText = time;
 
-    const historyRow = document.createElement("div");
-    historyRow.appendChild(logHistPass);
-    historyRow.appendChild(logHistTs);
+    // const historyRow = document.createElement("div");
+    // historyRow.appendChild(logHistPass);
+    // historyRow.appendChild(logHistTs);
 
-    passHistory.prepend(historyRow);
+    passHistory.innerText = lastPasswordUsed;
+    lastPasswordUsed = pass;
+    // passHistory.appendChild(historyRow);
 }
+
+// copy current passsword
+// const copyBtn = document.getElementById("copy");
+// copyBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     console.log(e)
+// })
+
+
 
 const modalDisp = document.getElementById("modal");
 const modalClose = document.getElementById("close");
@@ -120,5 +132,27 @@ modalClose.addEventListener("click", e => {
     modalDisp.style.display = "none";
 })
 
+const copyBtn = document.getElementById("copy");
+copyBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!pwDump.innerText) {
+        console.log("boop")
+        return;
+    } else {
+        const thisPass = pwDump.innerText;
+        navigator.clipboard.writeText(thisPass)
+    }
+});
+
+const showLastBtn = document.getElementById("lastPass");
+showLastBtn.addEventListener("click", e => {
+    e.preventDefault();
+    passHistory.classList.contains("hide") ? passHistory.classList.remove("hide") : passHistory.classList.add("hide");
+    // passHistory.classList.add("hide");
+})
+
+
+const resetBtn = document.getElementById("resetEverything")
+resetBtn.addEventListener("click", () => document.location.reload());
 
 

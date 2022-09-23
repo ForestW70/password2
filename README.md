@@ -20,11 +20,9 @@ v2.5 - MIT - For Good.
 
 * ### Project Notes: 
     * ###### more to come ~
-        - add fancy setting
-        - set up prefered default
+        - save default setting
+        - button to copy to clipboard
         - color schemes
-        - complete numonix list (nums, syms, caps)
-        - suggest words for the numonix list (db)
         - edit legal char list
 
 * #### Contribution:
