@@ -1,17 +1,39 @@
 import { lcChars, ucChars, numChars, symChars, allChars, numonix, mumbers, symbolicDevices } from "./legalChars.js";
 
-const charCount = document.getElementById("charCount");
-const fancyBool = document.getElementById("fancy")
-const submitBtn = document.getElementById("gener8");
+// body targets
 const passBox = document.getElementById("currPass");
-
 const pwDump = document.getElementById("newPass");
 const soundOut = document.getElementById("howDoUSay");
 const passHistory = document.getElementById("lastPassHint");
-let lastPasswordUsed = ""
+let lastPasswordUsed = "";
 
+// button bar func
+const charCount = document.getElementById("charCount");
+const submitBtn = document.getElementById("gener8");
+const copyBtn = document.getElementById("copy");
+const showLastBtn = document.getElementById("lastPass");
+const resetBtn = document.getElementById("resetEverything")
 
+// util buttons
+resetBtn.addEventListener("click", () => document.location.reload());
 
+copyBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!pwDump.innerText) {
+        console.log("not enough history!");
+        return;
+    } else {
+        const thisPass = pwDump.innerText;
+        navigator.clipboard.writeText(thisPass);
+    }
+});
+
+showLastBtn.addEventListener("click", e => {
+    e.preventDefault();
+    passHistory.classList.contains("hide") ? passHistory.classList.remove("hide") : passHistory.classList.add("hide");
+});
+
+// generate password button
 submitBtn.addEventListener("click", (eee) => {
     eee.preventDefault();
     passHistory.classList.add("hide");
@@ -49,6 +71,7 @@ const getRest = (x) => {
     return theRest;
 }
 
+// password sound out
 const dispNmnx = (str) => {
     soundOut.innerText = ""
     const passArr = str.split("");
@@ -79,6 +102,7 @@ const dispNmnx = (str) => {
     })
 }
 
+// data-checked sound out
 const getLet = (x) => {
     const san = x.toLowerCase();
     const monix = numonix[san][0];
@@ -100,34 +124,11 @@ const getSym = (x) => {
 }
 
 const dumpHistory = (pass) => {
-    // const logHistPass = document.createElement("span");
-    // logHistPass.classList.add("pass-hist")
-    // logHistPass.innerText = pass;
-
-    // const logHistTs = document.createElement("span");
-    // logHistTs.classList.add("pass-ts")
-    // const rightNow = new Date();
-    // const time = rightNow.getHours() + ":" + rightNow.getMinutes() + ":" + rightNow.getSeconds();
-    // logHistTs.innerText = time;
-
-    // const historyRow = document.createElement("div");
-    // historyRow.appendChild(logHistPass);
-    // historyRow.appendChild(logHistTs);
-
     passHistory.value = lastPasswordUsed;
     lastPasswordUsed = pass;
-    // passHistory.appendChild(historyRow);
 }
 
-// copy current passsword
-// const copyBtn = document.getElementById("copy");
-// copyBtn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     console.log(e)
-// })
-
-
-
+// info modal
 const modalDisp = document.getElementById("modal");
 const modalClose = document.getElementById("close");
 const oBtn = document.getElementById("infoModal");
@@ -142,27 +143,6 @@ modalClose.addEventListener("click", e => {
     modalDisp.style.display = "none";
 })
 
-const copyBtn = document.getElementById("copy");
-copyBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (!pwDump.innerText) {
-        console.log("boop")
-        return;
-    } else {
-        const thisPass = pwDump.innerText;
-        navigator.clipboard.writeText(thisPass)
-    }
-});
 
-const showLastBtn = document.getElementById("lastPass");
-showLastBtn.addEventListener("click", e => {
-    e.preventDefault();
-    passHistory.classList.contains("hide") ? passHistory.classList.remove("hide") : passHistory.classList.add("hide");
-    // passHistory.classList.add("hide");
-})
-
-
-const resetBtn = document.getElementById("resetEverything")
-resetBtn.addEventListener("click", () => document.location.reload());
 
 
