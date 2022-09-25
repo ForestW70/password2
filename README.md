@@ -19,11 +19,20 @@ v2.5 - MIT - For Good.
     3. press generate and behold, passwordus appearus.
 
 * ### Project Notes: 
-    * ###### more to come ~
-        - save default setting
-        - button to copy to clipboard
-        - color schemes
-        - edit legal char list
+    * ###### Version 1.0, 05/01/2022 ~
+        - Generate password string with phonetic pronunciation.
+        - View Password History.
+        - Basic styling, mobile friendly.
+        - Pop-out info modal.
+    * ###### Version 2.0, 09/25/2022 ~
+        - Added “Copy Password” button.
+        - Added “Last Password” button.
+        - Added “Reset” button.
+        - Formatted “sound out” feature to appear more uniform, readable.
+        - Removed “Fancy” option.
+        - Removed full password history.
+        - Various style modifications.
+
 
 * #### Contribution:
     If you enjoyed this project and would like to keep up to date with any new additions, feel free to follow my git hub! If you had any questions, comments, concerns or feedback, shoot me a message!
@@ -32,7 +41,7 @@ v2.5 - MIT - For Good.
     - Email - frw@gwu.edu
     - Github - https://github.com/ForestW70
     - LinkedIn - https://www.linkedin.com/in/forestwilson/
-    - [Thnx!](https://soundcloud.com/itsjustaburner) 
+    - [Thnx!](https://burnthis.space) 
 
 - ###### Links:    
     - [Visit page](https://forestw70.github.io/password2/)
