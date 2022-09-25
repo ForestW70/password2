@@ -56,14 +56,24 @@ const dispNmnx = (str) => {
     const nValidate = /[0-9]/;
 
     passArr.forEach(char => {
-        const newP = document.createElement("p");
+        const newP = document.createElement("div");
+        const charItem = document.createElement("span");
+        charItem.innerText = char;
+        
+        const charDivider = document.createElement("span");
+        charDivider.innerText = "~~~";
+
+        const charSound = document.createElement("span");
         if (char.match(lValidate)) {
-            newP.innerText = `${char} ~ ${getLet(char)}`;
+            charSound.innerText = getLet(char);
         } else if (char.match(nValidate)){
-            newP.innerText = `${char} ~~ ${getNum(char)}`
+            charSound.innerText = getNum(char);
         } else {
-            newP.innerText = `${char} ~~~ ${getSym(char)}`
+            charSound.innerText = getSym(char);
         } 
+        newP.appendChild(charItem);
+        newP.appendChild(charDivider);
+        newP.appendChild(charSound);
 
         soundOut.appendChild(newP);
     })
@@ -104,7 +114,7 @@ const dumpHistory = (pass) => {
     // historyRow.appendChild(logHistPass);
     // historyRow.appendChild(logHistTs);
 
-    passHistory.innerText = lastPasswordUsed;
+    passHistory.value = lastPasswordUsed;
     lastPasswordUsed = pass;
     // passHistory.appendChild(historyRow);
 }

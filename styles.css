@@ -162,12 +162,25 @@ input {
     /* min-height: 200px; */
     /* width: 100%; */
 }
+
+#howDoUSay div {
+    display: flex;
+    font-family: monospace;
+}
+
+#howDoUSay div span:first-child {
+  font-weight: 900;
+}
   
-#howDoUSay > p {
-    color: grey;
+#howDoUSay span {
+    color: rgb(76, 76, 76);
     padding: 0;
     font-size: 18px;
-    margin: 10px 15px;
+    margin: 10px 20px;
+}
+
+#lastPassHint {
+  padding: 5px;
 }
 
 #pastPass > div {
