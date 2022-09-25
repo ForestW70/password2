@@ -3,6 +3,8 @@ body {
   padding: 0;
 }
 
+
+/* header stuffs */
 header {
   background-color: #033c5a;
   margin-top: 15px;
@@ -34,15 +36,16 @@ header > button {
   height: 75px;
   width: 75px;
   min-height: 30px;
-    min-width: 30px;
-  /* margin: 25px; */
+  min-width: 30px;
   border-radius: 4px;
   font-size: 25px;
   background: white;
-    color: #033c5a;
-    cursor: pointer;
+  color: #033c5a;
+  cursor: pointer;
 }
 
+
+/* info modal */
 #modal {
   display: none; 
   position: fixed; 
@@ -52,16 +55,15 @@ header > button {
   width: 100%; 
   height: 100%; 
   overflow: auto; 
-  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); 
 }
 
 .modal-txt {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
   box-shadow: 5px 5px 15px black;
   border-radius: 3px;
 }
@@ -72,7 +74,7 @@ header > button {
 
 .modal-txt ul {
   padding-left: 25px;
-  font-family: monospace;
+  font-family: monospace, sans-serif;
 }
 
 #close {
@@ -90,16 +92,16 @@ header > button {
   cursor: pointer;
 }
 
+
+/* body styles */
 .meat {
   margin: 15px;
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: 1fr 1fr; */
 }
 
 .opt-label {
   padding: 15px 0;
-
 }
 
 label {
@@ -108,90 +110,22 @@ label {
 }
 
 input {
-  /* max-width: 100px; */
   align-self: center;
   margin: 0
 }
 
-#fancy {
-  width: 18px;
-  height: 18px;
-}
 
-.fas {
-  font-size: 18px;
-  color: grey;
-}
-
+/* body button bar */
 #gener8 {
   margin: 20px 5px;
-  /* padding: 15px; */
   font-size: 20px;
   background-color: #076394;
   color: white;
   border-radius: 6px;
-    cursor: pointer;
-    border: outset;
-    border-width: 10px;
-    font-family: serif;
-}
-
-.infos {  
-  display: flex;
-  flex-direction: column;
-}
-
-.infos > p {
-  /* text-shadow: 3px 3px 3px chartreuse; */
-  font-size: 40px;
-  font-family: fantasy;
-  margin: 50px 0;
-}
-
-#currPass {
-  margin-top: 10px;
-}
-
-.your-password-sir {
-  border: 10px silver inset;
-    border-style: ridge;
-    box-shadow: 10px 10px 3px navy;
-}
-
-#newPass {
-    padding: 20px;
-    font-size: 45px;
-    border: 2px inset #800808;
-    text-align: left;
-    min-height: 30px;
-    letter-spacing: 5px;
-    word-break: break-all;
-}
-  
-#howDoUSay {
-    border: 2px dotted rgb(132, 132, 255);
-    /* min-height: 200px; */
-    /* width: 100%; */
-}
-
-#howDoUSay div {
-    display: flex;
-    font-family: monospace;
-}
-
-#howDoUSay div span:first-child {
-  font-weight: 900;
-}
-  
-#howDoUSay span {
-    color: rgb(76, 76, 76);
-    padding: 0;
-    font-size: 18px;
-    margin: 10px 20px;
-}
-
-#lastPassHint {
-  padding: 5px;
+  cursor: pointer;
+  border: outset;
+  border-width: 10px;
+  font-family: serif;
 }
 
 #pastPass > div {
@@ -203,56 +137,55 @@ input {
 
 .pass-hist {
   font-size: 12px;
+}
+
+
+/* The Password (tm) */
+#currPass {
+  margin-top: 10px;
+}
+
+.your-password-sir {
+  border: 10px silver inset;
+  border-style: ridge;
+  box-shadow: 10px 10px 3px navy;
+}
+
+#newPass {
+  padding: 20px;
+  font-size: 45px;
+  border: 2px inset #800808;
+  text-align: left;
+  min-height: 30px;
+  letter-spacing: 5px;
+  word-break: break-all;
+}
   
+#howDoUSay {
+  border: 2px dotted rgb(132, 132, 255);
 }
 
-#pastPass > div:nth-child(1) > .pass-hist {
-  font-size: 30px;
-  margin-bottom: 20px;
-  text-decoration-line: underline;
+#howDoUSay div {
+  display: flex;
+  font-family: monospace, sans-serif;
 }
 
-#pastPass > div:nth-child(2) > .pass-hist {
-  font-size: 19px;
+#howDoUSay div span:first-child {
+  font-weight: 900;
+}
+  
+#howDoUSay span {
+  color: rgb(76, 76, 76);
+  padding: 0;
+  font-size: 18px;
+  margin: 10px 20px;
 }
 
-#pastPass > div:nth-child(3) > .pass-hist {
-  font-size: 16px;
+#lastPassHint {
+  padding: 5px;
 }
 
-#pastPass > div:nth-child(4) > .pass-hist {
-  font-size: 13px;
-}
-
-#pastPass > div:nth-child(5) > .pass-hist {
-  font-size: 10px;
-}
-
-#pastPass > div:nth-child(6) > .pass-hist {
-  font-size: 7px;
-}
-
-#pastPass > div:nth-child(7) > .pass-hist {
-  font-size: 5px;
-}
-
-#pastPass > div:nth-child(8) > .pass-hist {
-  font-size: 3px;
-}
-
-#pastPass > div:nth-child(n+9) > .pass-hist {
-  font-size: 2px;
-}
-
-.pass-ts {
-  color: rgb(158, 134, 0);
-  font-size: 10px;
-  font-family: sans-serif;
-  border-left: 1px solid black;
-  padding-left: 5px;
-  margin-bottom: 30px;
-}
-
+/* responsive adjustments */
 @media screen and (max-width: 750px) {
   header {
     justify-content: unset;
@@ -276,6 +209,7 @@ input {
   }
 }
 
+/* utility */
 .hide {
   display: none;
 }
