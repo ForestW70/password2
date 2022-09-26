@@ -19,10 +19,17 @@ resetBtn.addEventListener("click", () => document.location.reload());
 
 copyBtn.addEventListener("click", (e) => {
     e.preventDefault();
+
+    if (!copyBtn.classList.contains("copied")) {
+        copyBtn.classList.add("copied");
+        copyBtn.innerText = "Copied!"
+    }
+
     if (!pwDump.innerText) {
         console.log("not enough history!");
         return;
     } else {
+        console.log("coppied current password")
         const thisPass = pwDump.innerText;
         navigator.clipboard.writeText(thisPass);
     }
@@ -30,6 +37,7 @@ copyBtn.addEventListener("click", (e) => {
 
 showLastBtn.addEventListener("click", e => {
     e.preventDefault();
+
     passHistory.classList.contains("hide") ? passHistory.classList.remove("hide") : passHistory.classList.add("hide");
 });
 
@@ -37,8 +45,10 @@ showLastBtn.addEventListener("click", e => {
 submitBtn.addEventListener("click", (eee) => {
     eee.preventDefault();
     passHistory.classList.add("hide");
-    const chars = charCount.value;
-    generatePassword(chars);
+    copyBtn.classList.remove("copied");
+    copyBtn.innerText = "Copy";
+    const chars = charCount.value >= 50 ? 500 : charCount.value;
+    generatePassword(chars); 
     passBox.classList.add("your-password-sir")
 
 });
